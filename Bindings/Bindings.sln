@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Android", "Android", "{04A2DB55-41A4-411C-A31E-BFAF6E302FE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "de.hdodenhof.circleimageview", "Android\de.hdodenhof.circleimageview\de.hdodenhof.circleimageview.csproj", "{9AD45F7B-F482-49D0-BFE0-767E77F18AC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Shimmer.Android", "Android\Facebook.Shimmer.Android\Facebook.Shimmer.Android.csproj", "{2AB56622-4A72-4AF4-8837-F6175A04D256}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{D265D391-20CB-4109-BEE8-51A24303ABB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "Test\TestApp\TestApp.csproj", "{B71C18E2-AFC1-42C6-BC1D-15F091F64865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartRefresh.Layout", "Android\SmartRefresh.Layout\SmartRefresh.Layout.csproj", "{DE1071D4-66D8-4DD8-9C99-26635136A77A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartRefresh.Header", "Android\SmartRefresh.Header\SmartRefresh.Header.csproj", "{52994DBC-F95C-4B05-ACF7-9CDEA6354E6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Flexbox.Android", "Android\Google.Flexbox.Android\Google.Flexbox.Android.csproj", "{E1928E3A-3E6F-4B98-B779-E6AA91F84784}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AD45F7B-F482-49D0-BFE0-767E77F18AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AD45F7B-F482-49D0-BFE0-767E77F18AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AD45F7B-F482-49D0-BFE0-767E77F18AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AD45F7B-F482-49D0-BFE0-767E77F18AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB56622-4A72-4AF4-8837-F6175A04D256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB56622-4A72-4AF4-8837-F6175A04D256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB56622-4A72-4AF4-8837-F6175A04D256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB56622-4A72-4AF4-8837-F6175A04D256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71C18E2-AFC1-42C6-BC1D-15F091F64865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B71C18E2-AFC1-42C6-BC1D-15F091F64865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B71C18E2-AFC1-42C6-BC1D-15F091F64865}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B71C18E2-AFC1-42C6-BC1D-15F091F64865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B71C18E2-AFC1-42C6-BC1D-15F091F64865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B71C18E2-AFC1-42C6-BC1D-15F091F64865}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DE1071D4-66D8-4DD8-9C99-26635136A77A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE1071D4-66D8-4DD8-9C99-26635136A77A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE1071D4-66D8-4DD8-9C99-26635136A77A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE1071D4-66D8-4DD8-9C99-26635136A77A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52994DBC-F95C-4B05-ACF7-9CDEA6354E6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52994DBC-F95C-4B05-ACF7-9CDEA6354E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52994DBC-F95C-4B05-ACF7-9CDEA6354E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52994DBC-F95C-4B05-ACF7-9CDEA6354E6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1928E3A-3E6F-4B98-B779-E6AA91F84784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1928E3A-3E6F-4B98-B779-E6AA91F84784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1928E3A-3E6F-4B98-B779-E6AA91F84784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1928E3A-3E6F-4B98-B779-E6AA91F84784}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9AD45F7B-F482-49D0-BFE0-767E77F18AC9} = {04A2DB55-41A4-411C-A31E-BFAF6E302FE5}
+		{2AB56622-4A72-4AF4-8837-F6175A04D256} = {04A2DB55-41A4-411C-A31E-BFAF6E302FE5}
+		{B71C18E2-AFC1-42C6-BC1D-15F091F64865} = {D265D391-20CB-4109-BEE8-51A24303ABB7}
+		{DE1071D4-66D8-4DD8-9C99-26635136A77A} = {04A2DB55-41A4-411C-A31E-BFAF6E302FE5}
+		{52994DBC-F95C-4B05-ACF7-9CDEA6354E6B} = {04A2DB55-41A4-411C-A31E-BFAF6E302FE5}
+		{E1928E3A-3E6F-4B98-B779-E6AA91F84784} = {04A2DB55-41A4-411C-A31E-BFAF6E302FE5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DFB3D21-A6B3-41A3-8E98-53039B227887}
+	EndGlobalSection
+EndGlobal

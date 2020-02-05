@@ -348,3 +348,11 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Xamarin Android Bindings Lib
+classes.jar
+
+# Nuget Packages
+nuget.exe
+Packages/*.bat
+.nupkg
