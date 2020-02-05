@@ -9,7 +9,7 @@ Xamarin.Android and Xamarin.iOS binding
    Commonly Used Types:
    * `de.hdodenhof.circleimageview.CircleImageView` -> `DE.Hdodenhof.Circleimageview.CircleImageView`
    <br/>
- - **Facebook.Shimmer** [![NuGet version (Facebook.Shimmer.Android)](https://img.shields.io/nuget/v/Facebook.Shimmer.Android.svg)](https://www.nuget.org/packages/Facebook.Shimmer.Android/) -  https://github.com/facebook/shimmer-android 
+ - **Facebook.Shimmer** [![NuGet version (XAB.Facebook.Shimmer)](https://img.shields.io/nuget/v/XAB.Facebook.Shimmer.svg)](https://www.nuget.org/packages/XAB.Facebook.Shimmer/) -  https://github.com/facebook/shimmer-android 
   Shimmer is an Android library that provides an easy way to add a shimmer effect to any view in your Android app.
    Commonly Used Types:
    * `com.facebook.shimmer.ShimmerFrameLayout` -> `Com.Facebook.Shimmer.ShimmerFrameLayout`
