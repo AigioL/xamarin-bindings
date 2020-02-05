@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SmartRefresh.Header</id>
+    <version>1.1.0.1</version>
+    <title>Xamarin Android Binding Library - SmartRefresh.Header</title>
+    <authors>https://github.com/AigioL</authors>
+    <owners>https://github.com/AigioL</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">Apache-2.0</license>
+    <projectUrl>https://github.com/AigioL/xamarin-bindings</projectUrl>
+    <description>SmartRefresh.Header Binding for Xamarin Android. https://github.com/scwang90/SmartRefreshLayout
+
+Commonly Used Types:
+com.scwang.smartrefresh.header.BezierCircleHeader -> Com.Scwang.Smartrefresh.Header.BezierCircleHeader</description>
+    <tags>SmartRefresh.Header SmartRefresh.Layout Refresh SmartRefreshLayout Xamarin Plugin Binding Xamarin.Android</tags>
+    <repository type="git" url="https://github.com/AigioL/xamarin-bindings.git" />
+    <dependencies>
+      <group targetFramework="MonoAndroid9.0">
+        <dependency id="SmartRefresh.Layout" version="[1.1.0.1,)" />
+        <dependency id="Xamarin.AndroidX.Annotation" version="[1.1.0-rc1,)" />
+        <dependency id="Xamarin.AndroidX.CoordinatorLayout" version="[1.1.0-rc1,)" />
+        <dependency id="Xamarin.AndroidX.Core" version="[1.1.0-rc1,)" />
+        <dependency id="Xamarin.AndroidX.Fragment" version="[1.1.0-rc1,)" />
+        <dependency id="Xamarin.AndroidX.Interpolator" version="[1.0.0-rc1,)" />
+        <dependency id="Xamarin.AndroidX.RecyclerView" version="[1.1.0-rc1,)" />
+        <dependency id="Xamarin.AndroidX.ViewPager" version="[1.0.0-rc1,)" />
+        <dependency id="Xamarin.Google.Android.Material" version="[1.1.0-preview06,)" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="../source/SmartRefresh.Header/bin/Release/SmartRefresh.Header.dll" target="lib\MonoAndroid90\SmartRefresh.Header.dll" />
+  </files>
+</package>

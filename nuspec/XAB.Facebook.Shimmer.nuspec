@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>XAB.Facebook.Shimmer</id>
+    <version>0.5.0</version>
+    <title>Xamarin Android Binding Library - Facebook.Shimmer</title>
+    <authors>https://github.com/AigioL</authors>
+    <owners>https://github.com/AigioL</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <projectUrl>https://github.com/AigioL/xamarin-bindings</projectUrl>
+    <description>Facebook.Shimmer Binding for Xamarin Android. https://github.com/facebook/shimmer-android
+
+Commonly Used Types:
+com.facebook.shimmer.ShimmerFrameLayout -> Com.Facebook.Shimmer.ShimmerFrameLayout</description>
+    <tags>Shimmer Facebook.Shimmer ShimmerFrameLayout Xamarin Plugin Binding Xamarin.Android</tags>
+    <repository type="git" url="https://github.com/AigioL/xamarin-bindings.git" />
+    <dependencies>
+      <group targetFramework="MonoAndroid9.0">
+        <dependency id="Xamarin.AndroidX.Annotation" version="[1.1.0-rc1,)" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="licenses\Facebook.Shimmer.Android-LICENSE.txt" target="LICENSE.txt" />
+    <file src="../source/Facebook.Shimmer.Android/bin/Release/Facebook.Shimmer.Android.dll" target="lib\MonoAndroid90\Facebook.Shimmer.Android.dll" />
+  </files>
+</package>
