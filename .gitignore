@@ -354,5 +354,5 @@ classes.jar
 
 # Nuget Packages
 nuget.exe
-Packages/*.bat
+nuspec/*.bat
 .nupkg
