@@ -15,6 +15,9 @@ using Com.Facebook.Shimmer;
 
 namespace TestApp.Activities
 {
+    /// <summary>
+    /// https://github.com/facebook/shimmer-android/blob/0.5.0/sample/src/main/java/com/facebook/shimmer/sample/MainActivity.kt
+    /// </summary>
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
     public class ShimmerActivity : AppCompatActivity, View.IOnClickListener
     {
@@ -68,46 +71,43 @@ namespace TestApp.Activities
             // If a toast is already showing, hide it
             toast?.Cancel();
 
-            var shimmerBuilder = new Shimmer.AlphaHighlightBuilder();
-            switch (preset)
+            (var _toast, var shimmerBuilder) = preset switch
             {
-                case 1:
+                1 => (
                     // Slow and reverse
-                    toast = Toast.MakeText(this, "Slow and reverse", ToastLength.Short);
-                    shimmerBuilder.SetDuration(5000L);
-                    shimmerBuilder.SetRepeatMode((int)ValueAnimatorRepeatMode.Reverse);
-                    break;
-                case 2:
+                    Toast.MakeText(this, "Slow and reverse", ToastLength.Short),
+                    new Shimmer.AlphaHighlightBuilder().SetDuration(5000L).SetRepeatMode(ValueAnimatorRepeatMode.Reverse)
+                    ),
+                2 => (
                     // Thin, straight and transparent
-                    toast = Toast.MakeText(this, "Thin, straight and transparent", ToastLength.Short);
-                    shimmerBuilder.SetBaseAlpha(0.1f);
-                    shimmerBuilder.SetDropoff(0.1f);
-                    shimmerBuilder.SetTilt(0f);
-                    break;
-                case 3:
+                    Toast.MakeText(this, "Thin, straight and transparent", ToastLength.Short),
+                    new Shimmer.AlphaHighlightBuilder().SetBaseAlpha(0.1f).SetDropoff(0.1f).SetTilt(0f)
+                    ),
+                3 => (
                     // Sweep angle 90
-                    toast = Toast.MakeText(this, "Sweep angle 90", ToastLength.Short);
-                    shimmerBuilder.SetDuration(Shimmer.Direction.TopToBottom);
-                    shimmerBuilder.SetTilt(0f);
-                    break;
-                case 4:
+                    Toast.MakeText(this, "Sweep angle 90", ToastLength.Short),
+                    new Shimmer.AlphaHighlightBuilder().SetDirection(Shimmer.Direction.TOP_TO_BOTTOM).SetTilt(0f)
+                    ),
+                4 => (
                     // Spotlight
-                    toast = Toast.MakeText(this, "Spotlight", ToastLength.Short);
-                    shimmerBuilder.SetBaseAlpha(0f);
-                    shimmerBuilder.SetDuration(2000L);
-                    shimmerBuilder.SetDropoff(0.1f);
-                    shimmerBuilder.SetIntensity(0.35f);
-                    shimmerBuilder.SetShape(Shimmer.Shape.Radial);
-                    break;
-                case 5:
+                    Toast.MakeText(this, "Spotlight", ToastLength.Short),
+                    new Shimmer.AlphaHighlightBuilder().SetBaseAlpha(0f)
+                            .SetDuration(2000L)
+                            .SetDropoff(0.1f)
+                            .SetIntensity(0.35f)
+                            .SetShape(Shimmer.Shape.RADIA)
+                    ),
+                5 => (
                     // Off
-                    toast = Toast.MakeText(this, "Off", ToastLength.Short);
-                    shimmerBuilder = null;
-                    break;
-                default:
-                    toast = Toast.MakeText(this, "Default", ToastLength.Short);
-                    break;
-            }
+                    Toast.MakeText(this, "Off", ToastLength.Short),
+                    null
+                    ),
+                _ => (
+                    Toast.MakeText(this, "Default", ToastLength.Short),
+                    new Shimmer.AlphaHighlightBuilder()
+                    ),
+            };
+            toast = _toast;
             Binding.shimmer_view_container.SetShimmer(shimmerBuilder?.Build());
 
             // Show toast describing the chosen preset, if necessary
