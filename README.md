@@ -25,5 +25,8 @@ Xamarin.Android and Xamarin.iOS binding
     [![NuGet version (SmartRefresh.Header)](https://img.shields.io/nuget/v/SmartRefresh.Header.svg)](https://www.nuget.org/packages/SmartRefresh.Header/)
     [![Download](https://api.bintray.com/packages/scwang90/maven/SmartRefreshHeader/images/download.svg)](https://bintray.com/scwang90/maven/SmartRefreshHeader/_latestVersion)
     - SmartRefreshLayout's goal is to build a strong, stable and mature pull-down refresh layout framework, and to integrate all kinds of cool, diverse, practical and beautiful Headers and Footers.
-
+- **[FloatingActionButtonSpeedDial](https://github.com/leinardi/FloatingActionButtonSpeedDial)**
+[![NuGet version (XAB.FloatingActionButtonSpeedDial)](https://img.shields.io/nuget/v/XAB.FloatingActionButtonSpeedDial.svg)](https://www.nuget.org/packages/XAB.FloatingActionButtonSpeedDial/)
+[![Maven Central](https://img.shields.io/maven-central/v/com.leinardi.android/speed-dial)](https://search.maven.org/artifact/com.leinardi.android/speed-dial)
+    - Android library providing an implementation of the [Material Design Floating Action Button Speed Dial](https://material.io/guidelines/components/buttons-floating-action-button.html#buttons-floating-action-button-transitions).
 <!--## iOS Libraries-->

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.960
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 15.0.28307.960
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "de.hdodenhof.circleimageview", "source\de.hdodenhof.circleimageview\de.hdodenhof.circleimageview.csproj", "{9AD45F7B-F482-49D0-BFE0-767E77F18AC9}"
 EndProject
@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{E546AE07-C
 		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingActionButtonSpeedDial", "source\FloatingActionButtonSpeedDial\FloatingActionButtonSpeedDial.csproj", "{67B8D16C-779C-4914-B319-C93264E37A80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +68,10 @@ Global
 		{B71C18E2-AFC1-42C6-BC1D-15F091F64865}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B71C18E2-AFC1-42C6-BC1D-15F091F64865}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B71C18E2-AFC1-42C6-BC1D-15F091F64865}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{67B8D16C-779C-4914-B319-C93264E37A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B8D16C-779C-4914-B319-C93264E37A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B8D16C-779C-4914-B319-C93264E37A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B8D16C-779C-4914-B319-C93264E37A80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{52994DBC-F95C-4B05-ACF7-9CDEA6354E6B} = {C58C0FC4-86F2-42CD-AE30-F9A633DD5EC1}
 		{DE1071D4-66D8-4DD8-9C99-26635136A77A} = {C58C0FC4-86F2-42CD-AE30-F9A633DD5EC1}
 		{B71C18E2-AFC1-42C6-BC1D-15F091F64865} = {C587C244-E7EC-4770-8DD0-A695D69BE9BB}
+		{67B8D16C-779C-4914-B319-C93264E37A80} = {C58C0FC4-86F2-42CD-AE30-F9A633DD5EC1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DFB3D21-A6B3-41A3-8E98-53039B227887}
