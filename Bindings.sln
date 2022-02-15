@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31424.327
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 15.0.28307.960
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "de.hdodenhof.circleimageview", "source\de.hdodenhof.circleimageview\de.hdodenhof.circleimageview.csproj", "{9AD45F7B-F482-49D0-BFE0-767E77F18AC9}"
 EndProject
@@ -19,22 +19,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{C587
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "samples\Android\TestApp.csproj", "{B71C18E2-AFC1-42C6-BC1D-15F091F64865}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nuspec", "nuspec", "{5645260B-AAF0-4642-96D8-DFB0BAAA77EA}"
-	ProjectSection(SolutionItems) = preProject
-		nuspec\de.hdodenhof.circleimageview.nuspec = nuspec\de.hdodenhof.circleimageview.nuspec
-		nuspec\SmartRefresh.Header.nuspec = nuspec\SmartRefresh.Header.nuspec
-		nuspec\SmartRefresh.Layout.nuspec = nuspec\SmartRefresh.Layout.nuspec
-		nuspec\XAB.Facebook.Shimmer.nuspec = nuspec\XAB.Facebook.Shimmer.nuspec
-		nuspec\XAB.FlexboxLayout.nuspec = nuspec\XAB.FlexboxLayout.nuspec
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{E546AE07-CC80-47D6-8B2B-E8B07511C028}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingActionButtonSpeedDial", "source\FloatingActionButtonSpeedDial\FloatingActionButtonSpeedDial.csproj", "{67B8D16C-779C-4914-B319-C93264E37A80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FloatingActionButtonSpeedDial", "source\FloatingActionButtonSpeedDial\FloatingActionButtonSpeedDial.csproj", "{67B8D16C-779C-4914-B319-C93264E37A80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

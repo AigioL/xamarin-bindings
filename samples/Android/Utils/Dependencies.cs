@@ -5,6 +5,7 @@ using System.Reflection;
 
 namespace TestApp.Utils
 {
+    [Obsolete]
     public static class Dependencies
     {
         static Dependencies()
