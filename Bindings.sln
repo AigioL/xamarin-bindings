@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 15.0.28307.960
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "de.hdodenhof.circleimageview", "source\de.hdodenhof.circleimageview\de.hdodenhof.circleimageview.csproj", "{9AD45F7B-F482-49D0-BFE0-767E77F18AC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "de.hdodenhof.circleimageview", "source\de.hdodenhof.circleimageview\de.hdodenhof.circleimageview.csproj", "{9AD45F7B-F482-49D0-BFE0-767E77F18AC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Shimmer.Android", "source\Facebook.Shimmer.Android\Facebook.Shimmer.Android.csproj", "{2AB56622-4A72-4AF4-8837-F6175A04D256}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facebook.Shimmer.Android", "source\Facebook.Shimmer.Android\Facebook.Shimmer.Android.csproj", "{2AB56622-4A72-4AF4-8837-F6175A04D256}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Flexbox.Android", "source\Google.Flexbox.Android\Google.Flexbox.Android.csproj", "{E1928E3A-3E6F-4B98-B779-E6AA91F84784}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Flexbox.Android", "source\Google.Flexbox.Android\Google.Flexbox.Android.csproj", "{E1928E3A-3E6F-4B98-B779-E6AA91F84784}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartRefresh.Header", "source\SmartRefresh.Header\SmartRefresh.Header.csproj", "{52994DBC-F95C-4B05-ACF7-9CDEA6354E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartRefresh.Header", "source\SmartRefresh.Header\SmartRefresh.Header.csproj", "{52994DBC-F95C-4B05-ACF7-9CDEA6354E6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartRefresh.Layout", "source\SmartRefresh.Layout\SmartRefresh.Layout.csproj", "{DE1071D4-66D8-4DD8-9C99-26635136A77A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartRefresh.Layout", "source\SmartRefresh.Layout\SmartRefresh.Layout.csproj", "{DE1071D4-66D8-4DD8-9C99-26635136A77A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{C58C0FC4-86F2-42CD-AE30-F9A633DD5EC1}"
 EndProject
@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{E546AE07-C
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FloatingActionButtonSpeedDial", "source\FloatingActionButtonSpeedDial\FloatingActionButtonSpeedDial.csproj", "{67B8D16C-779C-4914-B319-C93264E37A80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AndroidLibV2rayLite", "source\AndroidLibV2rayLite\AndroidLibV2rayLite.csproj", "{C25AAEF7-6A83-4C45-81CD-51236FE37E63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{67B8D16C-779C-4914-B319-C93264E37A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67B8D16C-779C-4914-B319-C93264E37A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67B8D16C-779C-4914-B319-C93264E37A80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C25AAEF7-6A83-4C45-81CD-51236FE37E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C25AAEF7-6A83-4C45-81CD-51236FE37E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C25AAEF7-6A83-4C45-81CD-51236FE37E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C25AAEF7-6A83-4C45-81CD-51236FE37E63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +81,7 @@ Global
 		{DE1071D4-66D8-4DD8-9C99-26635136A77A} = {C58C0FC4-86F2-42CD-AE30-F9A633DD5EC1}
 		{B71C18E2-AFC1-42C6-BC1D-15F091F64865} = {C587C244-E7EC-4770-8DD0-A695D69BE9BB}
 		{67B8D16C-779C-4914-B319-C93264E37A80} = {C58C0FC4-86F2-42CD-AE30-F9A633DD5EC1}
+		{C25AAEF7-6A83-4C45-81CD-51236FE37E63} = {C58C0FC4-86F2-42CD-AE30-F9A633DD5EC1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DFB3D21-A6B3-41A3-8E98-53039B227887}
