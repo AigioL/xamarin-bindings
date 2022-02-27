@@ -5,7 +5,7 @@
     <IsBindingProject>true</IsBindingProject>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
-    <Version>1.0.0</Version>
+    <Version>1.0.0.1</Version>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
@@ -31,6 +31,14 @@ libv2ray.V2RayPoint -&gt; Libv2ray.V2RayPoint</Description>
   <ItemGroup>
     <LibraryProjectZip Include="Jars\*.aar" />
     <TransformFile Include="Transforms\*.xml" />
+    <Compile Remove="Jars\assets\**" />
+    <Compile Remove="Jars\jni\**" />
+    <EmbeddedResource Remove="Jars\assets\**" />
+    <EmbeddedResource Remove="Jars\jni\**" />
+    <LibraryProjectZip Remove="Jars\assets\**" />
+    <LibraryProjectZip Remove="Jars\jni\**" />
+    <None Remove="Jars\assets\**" />
+    <None Remove="Jars\jni\**" />
     <None Remove="Transforms\*.xml" />
   </ItemGroup>
 
