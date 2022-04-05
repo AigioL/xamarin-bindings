@@ -1,11 +1,11 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
-    <TargetFramework>MonoAndroid11.0</TargetFramework>
+    <TargetFrameworks>MonoAndroid11.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.2</Version>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
@@ -44,5 +44,11 @@ libv2ray.V2RayPoint -&gt; Libv2ray.V2RayPoint</Description>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <LibraryProjectZip Update="Jars\libv2ray.aar">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </LibraryProjectZip>
   </ItemGroup>
 </Project>

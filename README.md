@@ -14,6 +14,7 @@ Xamarin.Android and Xamarin.iOS binding
     - Shimmer is an Android library that provides an easy way to add a shimmer effect to any view in your Android app.
 - **[Google.Flexbox](https://github.com/google/flexbox-layout)** 
 [![NuGet version (XAB.FlexboxLayout)](https://img.shields.io/nuget/v/XAB.FlexboxLayout.svg)](https://www.nuget.org/packages/XAB.FlexboxLayout/)
+[![Release Version](https://img.shields.io/github/v/release/google/flexbox-layout?style=flat-square)](https://github.com/google/flexbox-layout/releases/latest)
     - FlexboxLayout is a library project which brings the similar capabilities of CSS Flexible Box Layout Module to Android.
     - package -> namespace:`com.google.android.flexbox` -> `Android.Flexbox`
 - **[SmartRefresh](https://github.com/scwang90/SmartRefreshLayout)**

@@ -1,11 +1,11 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
-    <TargetFramework>MonoAndroid9.0</TargetFramework>
+    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Version>1.1.0.2</Version>
+    <Version>1.1.0.3</Version>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
@@ -18,9 +18,9 @@
     <Description>SmartRefresh.Layout Binding for Xamarin Android. https://github.com/scwang90/SmartRefreshLayout
 
 Commonly Used Types:
-com.scwang.smartrefresh.layout.SmartRefreshLayout -> Com.Scwang.Smartrefresh.Layout.SmartRefreshLayout
-com.scwang.smartrefresh.layout.header.ClassicsHeader -> Com.Scwang.Smartrefresh.Layout.Header.ClassicsHeader
-com.scwang.smartrefresh.layout.footer.ClassicsFooter -> Com.Scwang.Smartrefresh.Layout.Footer.ClassicsFooter</Description>
+com.scwang.smartrefresh.layout.SmartRefreshLayout -&gt; Com.Scwang.Smartrefresh.Layout.SmartRefreshLayout
+com.scwang.smartrefresh.layout.header.ClassicsHeader -&gt; Com.Scwang.Smartrefresh.Layout.Header.ClassicsHeader
+com.scwang.smartrefresh.layout.footer.ClassicsFooter -&gt; Com.Scwang.Smartrefresh.Layout.Footer.ClassicsFooter</Description>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>

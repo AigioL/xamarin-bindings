@@ -1,11 +1,11 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
-    <TargetFramework>MonoAndroid9.0</TargetFramework>
+    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
     <IsBindingProject>true</IsBindingProject>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
-    <Version>0.5.0.2</Version>
+    <Version>0.5.0.3</Version>
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
@@ -18,7 +18,7 @@
     <Description>Facebook.Shimmer Binding for Xamarin Android. https://github.com/facebook/shimmer-android
 
 Commonly Used Types:
-com.facebook.shimmer.ShimmerFrameLayout -> Com.Facebook.Shimmer.ShimmerFrameLayout</Description>
+com.facebook.shimmer.ShimmerFrameLayout -&gt; Com.Facebook.Shimmer.ShimmerFrameLayout</Description>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
