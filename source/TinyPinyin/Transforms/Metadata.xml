@@ -13,6 +13,7 @@
 
   <remove-node path="/api/package[@name='com.github.promeg.tinypinyin.lexicons.android.cncity']/class[@name='BuildConfig']" />
   <remove-node path="/api/package[@name='com.github.promeg.tinypinyin.android.asset.lexicons']/class[@name='BuildConfig']" />
+	<remove-node path="/api/package[@name='com.github.promeg.tinypinyin']/class[@name='BuildConfig']" />
 
   <attr path="/api/package[@name='com.github.promeg.pinyinhelper']/class[@name='Pinyin']" name="managedName">PinyinHelper</attr>
   <attr path="/api/package[@name='com.github.promeg.pinyinhelper']" name="managedName">TinyPinyin</attr>

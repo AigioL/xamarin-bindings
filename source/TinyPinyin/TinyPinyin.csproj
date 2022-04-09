@@ -5,7 +5,7 @@
 		<IsBindingProject>true</IsBindingProject>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<Version>2.0.4</Version>
+		<Version>2.0.4.2</Version>
 		<RepositoryType>git</RepositoryType>
 		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
@@ -42,16 +42,12 @@
 
 	<ItemGroup>
 		<PackageReference Include="XAB.Aho-Corasick" Version="0.6.3" />
-		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.6.20.1" />
+		<!--<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.6.20.1" />-->
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
 	</ItemGroup>
 
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
 		<Compile Remove="obj\Debug\net6.0-android\**" />
 		<Compile Remove="obj\Release\net6.0-android\**" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Jars\" />
 	</ItemGroup>
 </Project>
