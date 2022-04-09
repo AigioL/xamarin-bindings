@@ -1,54 +1,62 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
-  <PropertyGroup>
-    <TargetFrameworks>MonoAndroid11.0;net6.0-android</TargetFrameworks>
-    <IsBindingProject>true</IsBindingProject>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
-    <Version>1.0.0.2</Version>
-    <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
-    <PackageTags>AndroidLibV2rayLite V2Ray Xamarin Plugin Binding Xamarin.Android</PackageTags>
-    <Product>AndroidLibV2rayLite</Product>
-    <Company />
-    <PackageId>XAB.AndroidLibV2rayLite</PackageId>
-    <Title>Xamarin Android Binding Library - AndroidLibV2rayLite</Title>
-    <Authors>https://github.com/AigioL</Authors>
-    <Description>AndroidLibV2rayLite Binding for Xamarin Android. https://github.com/2dust/AndroidLibV2rayLite
+	<PropertyGroup>
+		<TargetFrameworks>MonoAndroid11.0;net6.0-android</TargetFrameworks>
+		<IsBindingProject>true</IsBindingProject>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
+		<Version>1.0.0.2</Version>
+		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
+		<PackageTags>AndroidLibV2rayLite V2Ray Xamarin Plugin Binding Xamarin.Android</PackageTags>
+		<Product>AndroidLibV2rayLite</Product>
+		<Company />
+		<PackageId>XAB.AndroidLibV2rayLite</PackageId>
+		<AssemblyName>XAB.AndroidLibV2rayLite</AssemblyName>
+		<Title>Xamarin Android Binding Library - AndroidLibV2rayLite</Title>
+		<Authors>https://github.com/AigioL</Authors>
+		<Description>
+			AndroidLibV2rayLite Binding for Xamarin Android. https://github.com/2dust/AndroidLibV2rayLite
 
-Commonly Used Types:
-libv2ray.Libv2ray -&gt; Libv2ray.Libv2ray
-libv2ray.V2RayPoint -&gt; Libv2ray.V2RayPoint</Description>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
+			Commonly Used Types:
+			libv2ray.Libv2ray -&gt; Libv2ray.Libv2ray
+			libv2ray.V2RayPoint -&gt; Libv2ray.V2RayPoint
+		</Description>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <LibraryProjectZip Include="Jars\*.aar" />
-    <TransformFile Include="Transforms\*.xml" />
-    <Compile Remove="Jars\assets\**" />
-    <Compile Remove="Jars\jni\**" />
-    <EmbeddedResource Remove="Jars\assets\**" />
-    <EmbeddedResource Remove="Jars\jni\**" />
-    <LibraryProjectZip Remove="Jars\assets\**" />
-    <LibraryProjectZip Remove="Jars\jni\**" />
-    <None Remove="Jars\assets\**" />
-    <None Remove="Jars\jni\**" />
-    <None Remove="Transforms\*.xml" />
-  </ItemGroup>
+	<ItemGroup>
+		<LibraryProjectZip Include="Jars\*.aar" />
+		<TransformFile Include="Transforms\*.xml" />
+		<Compile Remove="Jars\assets\**" />
+		<Compile Remove="Jars\jni\**" />
+		<EmbeddedResource Remove="Jars\assets\**" />
+		<EmbeddedResource Remove="Jars\jni\**" />
+		<LibraryProjectZip Remove="Jars\assets\**" />
+		<LibraryProjectZip Remove="Jars\jni\**" />
+		<None Remove="Jars\assets\**" />
+		<None Remove="Jars\jni\**" />
+		<None Remove="Transforms\*.xml" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <LibraryProjectZip Update="Jars\libv2ray.aar">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </LibraryProjectZip>
-  </ItemGroup>
+	<ItemGroup>
+		<LibraryProjectZip Update="Jars\libv2ray.aar">
+			<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		</LibraryProjectZip>
+	</ItemGroup>
+
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+		<Compile Remove="obj\Debug\net6.0-android\**" />
+		<Compile Remove="obj\Release\net6.0-android\**" />
+	</ItemGroup>
 </Project>

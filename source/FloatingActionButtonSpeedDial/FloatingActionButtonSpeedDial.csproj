@@ -1,44 +1,52 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
-  <PropertyGroup>
-    <TargetFrameworks>MonoAndroid11.0;net6.0-android</TargetFrameworks>
-    <IsBindingProject>true</IsBindingProject>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Version>3.2.0.2</Version>
-    <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
-    <PackageTags>fab floatingactionbutton Xamarin.Android speed-dial Xamarin Plugin Binding</PackageTags>
-    <Product>FloatingActionButtonSpeedDial</Product>
-    <Company />
-    <PackageId>XAB.FloatingActionButtonSpeedDial</PackageId>
-    <Title>Xamarin Android Binding Library - com.leinardi.android:speed-dial</Title>
-    <Authors>https://github.com/AigioL</Authors>
-    <Description>com.leinardi.android:speed-dial for Xamarin Android. https://github.com/leinardi/FloatingActionButtonSpeedDial
+	<PropertyGroup>
+		<TargetFrameworks>MonoAndroid11.0;net6.0-android</TargetFrameworks>
+		<IsBindingProject>true</IsBindingProject>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<Version>3.2.0.2</Version>
+		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
+		<PackageTags>fab floatingactionbutton Xamarin.Android speed-dial Xamarin Plugin Binding</PackageTags>
+		<Product>FloatingActionButtonSpeedDial</Product>
+		<Company />
+		<PackageId>XAB.FloatingActionButtonSpeedDial</PackageId>
+		<AssemblyName>XAB.FloatingActionButtonSpeedDial</AssemblyName>
+		<Title>Xamarin Android Binding Library - com.leinardi.android:speed-dial</Title>
+		<Authors>https://github.com/AigioL</Authors>
+		<Description>
+			com.leinardi.android:speed-dial for Xamarin Android. https://github.com/leinardi/FloatingActionButtonSpeedDial
 
-Commonly Used Types:
-com.leinardi.android.speeddial.SpeedDialView -&gt; Com.Leinardi.Android.Speeddial.SpeedDialView</Description>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
+			Commonly Used Types:
+			com.leinardi.android.speeddial.SpeedDialView -&gt; Com.Leinardi.Android.Speeddial.SpeedDialView
+		</Description>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <LibraryProjectZip Include="Jars\*.aar" />
-    <TransformFile Include="Transforms\*.xml" />
-    <None Remove="Transforms\*.xml" />
-  </ItemGroup>
+	<ItemGroup>
+		<LibraryProjectZip Include="Jars\*.aar" />
+		<TransformFile Include="Transforms\*.xml" />
+		<None Remove="Transforms\*.xml" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <!-- https://github.com/leinardi/FloatingActionButtonSpeedDial/blob/3.2.0/library/build.gradle -->
-    <!-- https://github.com/leinardi/FloatingActionButtonSpeedDial/blob/3.2.0/dependencies.gradle -->
-    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.1.3" />
-    <PackageReference Include="Xamarin.AndroidX.CardView" Version="1.0.0.11" />
-    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.3.0.1" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-  </ItemGroup>
+	<ItemGroup>
+		<!-- https://github.com/leinardi/FloatingActionButtonSpeedDial/blob/3.2.0/library/build.gradle -->
+		<!-- https://github.com/leinardi/FloatingActionButtonSpeedDial/blob/3.2.0/dependencies.gradle -->
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.3.1.3" />
+		<PackageReference Include="Xamarin.AndroidX.CardView" Version="1.0.0.11" />
+		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.3.0.1" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+		<Compile Remove="obj\Debug\net6.0-android\**" />
+		<Compile Remove="obj\Release\net6.0-android\**" />
+	</ItemGroup>
 </Project>

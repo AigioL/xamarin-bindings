@@ -5,45 +5,45 @@
 		<IsBindingProject>true</IsBindingProject>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<Version>1.1.0.3</Version>
+		<Version>0.6.3</Version>
 		<RepositoryType>git</RepositoryType>
 		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
-		<PackageTags>SmartRefresh.Header SmartRefresh.Layout Refresh SmartRefreshLayout Xamarin Plugin Binding Xamarin.Android</PackageTags>
-		<Product>SmartRefresh.Header</Product>
+		<PackageTags>Aho-Corasick org.ahocorasick ahocorasick Xamarin Plugin Binding Xamarin.Android</PackageTags>
+		<Product>Aho-Corasick</Product>
 		<Company />
-		<PackageId>SmartRefresh.Header</PackageId>
-		<AssemblyName>XAB.SmartRefresh.Header</AssemblyName>
-		<Title>Xamarin Android Binding Library - SmartRefresh.Header</Title>
+		<PackageId>XAB.Aho-Corasick</PackageId>
+		<AssemblyName>XAB.Aho-Corasick</AssemblyName>
+		<Title>Xamarin Android Binding Library - org.ahocorasick</Title>
 		<Authors>https://github.com/AigioL</Authors>
 		<Description>
-			SmartRefresh.Header Binding for Xamarin Android. https://github.com/scwang90/SmartRefreshLayout
+			org.ahocorasick Binding for Xamarin Android. https://github.com/robert-bor/aho-corasick
 
 			Commonly Used Types:
-			com.scwang.smartrefresh.header.BezierCircleHeader -&gt; Com.Scwang.Smartrefresh.Header.BezierCircleHeader
+			org.ahocorasick.trie -&gt; Org.Ahocorasick.Trie
 		</Description>
+		<RootNamespace>Org.Ahocorasick</RootNamespace>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<AndroidUseIntermediateDesignerFile>false</AndroidUseIntermediateDesignerFile>
+		<LangVersion>preview</LangVersion>
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<EmbeddedJar Include="Jars\*.jar" />
 		<LibraryProjectZip Include="Jars\*.aar" />
 		<TransformFile Include="Transforms\*.xml" />
 		<None Remove="Transforms\*.xml" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<!-- https://github.com/scwang90/SmartRefreshLayout/blob/androidx/refresh-layout/build.gradle -->
-		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.1.0.5" />
+		<!-- .gradle\caches\modules-2\files-2.1\org.ahocorasick\ahocorasick\0.6.3\8936d1c8495892d9488a725d2f829f3ef055168d\ahocorasick-0.6.3.jar -->
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\SmartRefresh.Layout\SmartRefresh.Layout.csproj" />
 	</ItemGroup>
 
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">

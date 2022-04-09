@@ -1,41 +1,49 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
-  <PropertyGroup>
-    <TargetFrameworks>MonoAndroid10.0;net6.0-android</TargetFrameworks>
-    <IsBindingProject>true</IsBindingProject>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Version>3.1.0.2</Version>
-    <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
-    <PackageTags>CircleImageView ImageView Xamarin Plugin Binding Xamarin.Android</PackageTags>
-    <Product>CircleImageView</Product>
-    <Company />
-    <PackageId>de.hdodenhof.circleimageview</PackageId>
-    <Title>Xamarin Android Binding Library - de.hdodenhof.circleimageview</Title>
-    <Authors>https://github.com/AigioL</Authors>
-    <Description>de.hdodenhof.circleimageview Binding for Xamarin Android. https://github.com/hdodenhof/CircleImageView
+	<PropertyGroup>
+		<TargetFrameworks>MonoAndroid10.0;net6.0-android</TargetFrameworks>
+		<IsBindingProject>true</IsBindingProject>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<Version>3.1.0.2</Version>
+		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
+		<PackageTags>CircleImageView ImageView Xamarin Plugin Binding Xamarin.Android</PackageTags>
+		<Product>CircleImageView</Product>
+		<Company />
+		<PackageId>de.hdodenhof.circleimageview</PackageId>
+		<AssemblyName>XAB.de.hdodenhof.circleimageview</AssemblyName>
+		<Title>Xamarin Android Binding Library - de.hdodenhof.circleimageview</Title>
+		<Authors>https://github.com/AigioL</Authors>
+		<Description>
+			de.hdodenhof.circleimageview Binding for Xamarin Android. https://github.com/hdodenhof/CircleImageView
 
-Commonly Used Types:
-de.hdodenhof.circleimageview.CircleImageView -&gt; DE.Hdodenhof.Circleimageview.CircleImageView</Description>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
+			Commonly Used Types:
+			de.hdodenhof.circleimageview.CircleImageView -&gt; DE.Hdodenhof.Circleimageview.CircleImageView
+		</Description>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <LibraryProjectZip Include="Jars\*.aar" />
-    <TransformFile Include="Transforms\*.xml" />
-    <None Remove="Transforms\*.xml" />
-  </ItemGroup>
+	<ItemGroup>
+		<LibraryProjectZip Include="Jars\*.aar" />
+		<TransformFile Include="Transforms\*.xml" />
+		<None Remove="Transforms\*.xml" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <!-- https://github.com/hdodenhof/CircleImageView/blob/v3.1.0/circleimageview/build.gradle -->
-    <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.1.0.9" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-  </ItemGroup>
+	<ItemGroup>
+		<!-- https://github.com/hdodenhof/CircleImageView/blob/v3.1.0/circleimageview/build.gradle -->
+		<PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.1.0.9" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+		<Compile Remove="obj\Debug\net6.0-android\**" />
+		<Compile Remove="obj\Release\net6.0-android\**" />
+	</ItemGroup>
 </Project>

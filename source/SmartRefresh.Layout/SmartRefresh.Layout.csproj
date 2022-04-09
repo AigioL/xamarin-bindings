@@ -1,43 +1,51 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
-  <PropertyGroup>
-    <TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
-    <IsBindingProject>true</IsBindingProject>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Version>1.1.0.3</Version>
-    <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
-    <PackageTags>SmartRefresh.Layout Refresh SmartRefreshLayout Xamarin Plugin Binding Xamarin.Android</PackageTags>
-    <Product>SmartRefresh.Layout</Product>
-    <Company />
-    <PackageId>SmartRefresh.Layout</PackageId>
-    <Title>Xamarin Android Binding Library - SmartRefresh.Layout</Title>
-    <Authors>https://github.com/AigioL</Authors>
-    <Description>SmartRefresh.Layout Binding for Xamarin Android. https://github.com/scwang90/SmartRefreshLayout
+	<PropertyGroup>
+		<TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
+		<IsBindingProject>true</IsBindingProject>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<Version>1.1.0.3</Version>
+		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
+		<PackageTags>SmartRefresh.Layout Refresh SmartRefreshLayout Xamarin Plugin Binding Xamarin.Android</PackageTags>
+		<Product>SmartRefresh.Layout</Product>
+		<Company />
+		<PackageId>SmartRefresh.Layout</PackageId>
+		<AssemblyName>XAB.SmartRefresh.Layout</AssemblyName>
+		<Title>Xamarin Android Binding Library - SmartRefresh.Layout</Title>
+		<Authors>https://github.com/AigioL</Authors>
+		<Description>
+			SmartRefresh.Layout Binding for Xamarin Android. https://github.com/scwang90/SmartRefreshLayout
 
-Commonly Used Types:
-com.scwang.smartrefresh.layout.SmartRefreshLayout -&gt; Com.Scwang.Smartrefresh.Layout.SmartRefreshLayout
-com.scwang.smartrefresh.layout.header.ClassicsHeader -&gt; Com.Scwang.Smartrefresh.Layout.Header.ClassicsHeader
-com.scwang.smartrefresh.layout.footer.ClassicsFooter -&gt; Com.Scwang.Smartrefresh.Layout.Footer.ClassicsFooter</Description>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
+			Commonly Used Types:
+			com.scwang.smartrefresh.layout.SmartRefreshLayout -&gt; Com.Scwang.Smartrefresh.Layout.SmartRefreshLayout
+			com.scwang.smartrefresh.layout.header.ClassicsHeader -&gt; Com.Scwang.Smartrefresh.Layout.Header.ClassicsHeader
+			com.scwang.smartrefresh.layout.footer.ClassicsFooter -&gt; Com.Scwang.Smartrefresh.Layout.Footer.ClassicsFooter
+		</Description>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <LibraryProjectZip Include="Jars\*.aar" />
-    <TransformFile Include="Transforms\*.xml" />
-    <None Remove="Transforms\*.xml" />
-  </ItemGroup>
+	<ItemGroup>
+		<LibraryProjectZip Include="Jars\*.aar" />
+		<TransformFile Include="Transforms\*.xml" />
+		<None Remove="Transforms\*.xml" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <!-- https://github.com/scwang90/SmartRefreshLayout/blob/androidx/refresh-layout/build.gradle -->
-    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.1.0.5" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-  </ItemGroup>
+	<ItemGroup>
+		<!-- https://github.com/scwang90/SmartRefreshLayout/blob/androidx/refresh-layout/build.gradle -->
+		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.1.0.5" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+		<Compile Remove="obj\Debug\net6.0-android\**" />
+		<Compile Remove="obj\Release\net6.0-android\**" />
+	</ItemGroup>
 </Project>

@@ -1,44 +1,52 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
-  <PropertyGroup>
-    <TargetFrameworks>MonoAndroid11.0;net6.0-android</TargetFrameworks>
-    <IsBindingProject>true</IsBindingProject>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Version>3.0.0.1</Version>
-    <RepositoryType>git</RepositoryType>
-    <PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
-    <PackageTags>FlexboxLayout flexbox-layout Flex Box Google Wrapping LinearLayout Xamarin Plugin Binding Xamarin.Android</PackageTags>
-    <Product>FlexboxLayout</Product>
-    <Company />
-    <PackageId>XAB.FlexboxLayout</PackageId>
-    <Title>Xamarin Android Binding Library - FlexboxLayout</Title>
-    <Authors>https://github.com/AigioL</Authors>
-    <Description>FlexboxLayout Binding for Xamarin Android. https://github.com/google/flexbox-layout
+	<PropertyGroup>
+		<TargetFrameworks>MonoAndroid11.0;net6.0-android</TargetFrameworks>
+		<IsBindingProject>true</IsBindingProject>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<Version>3.0.0.1</Version>
+		<RepositoryType>git</RepositoryType>
+		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
+		<PackageTags>FlexboxLayout flexbox-layout Flex Box Google Wrapping LinearLayout Xamarin Plugin Binding Xamarin.Android</PackageTags>
+		<Product>FlexboxLayout</Product>
+		<Company />
+		<PackageId>XAB.FlexboxLayout</PackageId>
+		<AssemblyName>XAB.FlexboxLayout</AssemblyName>
+		<Title>Xamarin Android Binding Library - FlexboxLayout</Title>
+		<Authors>https://github.com/AigioL</Authors>
+		<Description>
+			FlexboxLayout Binding for Xamarin Android. https://github.com/google/flexbox-layout
 
-Commonly Used Types:
-com.google.android.flexbox.FlexboxLayout -&gt; Android.Flexbox.FlexboxLayout
-com.google.android.flexbox.FlexboxLayoutManager -&gt; Android.Flexbox.FlexboxLayoutManager</Description>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
+			Commonly Used Types:
+			com.google.android.flexbox.FlexboxLayout -&gt; Android.Flexbox.FlexboxLayout
+			com.google.android.flexbox.FlexboxLayoutManager -&gt; Android.Flexbox.FlexboxLayoutManager
+		</Description>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <LibraryProjectZip Include="Jars\*.aar" />
-    <TransformFile Include="Transforms\*.xml" />
-    <None Remove="Transforms\*.xml" />
-  </ItemGroup>
+	<ItemGroup>
+		<LibraryProjectZip Include="Jars\*.aar" />
+		<TransformFile Include="Transforms\*.xml" />
+		<None Remove="Transforms\*.xml" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <!-- https://github.com/google/flexbox-layout/blob/3.0.0/build.gradle -->
-    <!-- https://github.com/google/flexbox-layout/blob/3.0.0/flexbox/build.gradle -->
-    <PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.2.0" />
-    <PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.4.32.1" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-  </ItemGroup>
+	<ItemGroup>
+		<!-- https://github.com/google/flexbox-layout/blob/3.0.0/build.gradle -->
+		<!-- https://github.com/google/flexbox-layout/blob/3.0.0/flexbox/build.gradle -->
+		<PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.2.0" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.4.32.1" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+		<Compile Remove="obj\Debug\net6.0-android\**" />
+		<Compile Remove="obj\Release\net6.0-android\**" />
+	</ItemGroup>
 </Project>

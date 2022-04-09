@@ -1,6 +1,6 @@
 # xamarin-bindings
 
-Xamarin.Android and Xamarin.iOS binding
+Xamarin.Android and ~~Xamarin.iOS~~ binding
 
 ## Android Libraries
 
@@ -27,4 +27,12 @@ Xamarin.Android and Xamarin.iOS binding
 [![NuGet version (XAB.FloatingActionButtonSpeedDial)](https://img.shields.io/nuget/v/XAB.FloatingActionButtonSpeedDial.svg)](https://www.nuget.org/packages/XAB.FloatingActionButtonSpeedDial/)
 [![Maven Central](https://img.shields.io/maven-central/v/com.leinardi.android/speed-dial)](https://search.maven.org/artifact/com.leinardi.android/speed-dial)
     - Android library providing an implementation of the [Material Design Floating Action Button Speed Dial](https://material.io/guidelines/components/buttons-floating-action-button.html#buttons-floating-action-button-transitions).
+- **[Aho-Corasick](https://github.com/robert-bor/aho-corasick)** 
+[![NuGet version (XAB.Aho-Corasick)](https://img.shields.io/nuget/v/XAB.Aho-Corasick.svg)](https://www.nuget.org/packages/XAB.Aho-Corasick/)
+[![Maven Central](https://img.shields.io/maven-central/v/org.ahocorasick/ahocorasick)](https://search.maven.org/artifact/org.ahocorasick/ahocorasick)
+    - Aho CoraSick Algorithm For Efficient String Matching
+- **[TinyPinyin](https://github.com/AigioL/TinyPinyin)** 
+[![NuGet version (XAB.TinyPinyin)](https://img.shields.io/nuget/v/XAB.TinyPinyin.svg)](https://www.nuget.org/packages/XAB.TinyPinyin/)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.biezhi/TinyPinyin)](https://search.maven.org/artifact/io.github.biezhi/TinyPinyin)
+    - Fast, low memory footprint Chinese character to Pinyin library for Android
 <!--## iOS Libraries-->

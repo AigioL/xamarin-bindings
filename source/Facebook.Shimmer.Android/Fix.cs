@@ -2,8 +2,7 @@
 using Android.Views;
 using AndroidX.Annotations;
 
-#pragma warning disable CS1591
-
+// ReSharper disable once CheckNamespace
 namespace Com.Facebook.Shimmer
 {
     /// <summary>
@@ -213,7 +212,7 @@ namespace Com.Facebook.Shimmer
         /// <param name="builder"></param>
         /// <param name="alpha"></param>
         /// <returns></returns>
-        public static T SetBaseAlpha<T>(this T builder, [FloatRange(From = 0.0d, To = 1.0d)]float alpha) where T : Shimmer.Builder, Shimmer.IBuilder<T>
+        public static T SetBaseAlpha<T>(this T builder, [FloatRange(From = 0.0d, To = 1.0d)] float alpha) where T : Shimmer.Builder, Shimmer.IBuilder<T>
         {
             builder.SetBaseAlpha(alpha);
             return builder;
@@ -226,7 +225,7 @@ namespace Com.Facebook.Shimmer
         /// <param name="builder"></param>
         /// <param name="alpha"></param>
         /// <returns></returns>
-        public static T SetHighlightAlpha<T>(this T builder, [FloatRange(From = 0.0d, To = 1.0d)]float alpha) where T : Shimmer.Builder, Shimmer.IBuilder<T>
+        public static T SetHighlightAlpha<T>(this T builder, [FloatRange(From = 0.0d, To = 1.0d)] float alpha) where T : Shimmer.Builder, Shimmer.IBuilder<T>
         {
             builder.SetHighlightAlpha(alpha);
             return builder;
@@ -324,5 +323,3 @@ namespace Com.Facebook.Shimmer
         }
     }
 }
-
-#pragma warning restore CS1591

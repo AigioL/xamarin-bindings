@@ -1,53 +1,57 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras">
+<Project Sdk="MSBuild.Sdk.Extras">
 
 	<PropertyGroup>
-		<TargetFrameworks>MonoAndroid9.0;net6.0-android</TargetFrameworks>
+		<TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
 		<IsBindingProject>true</IsBindingProject>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<Version>1.1.0.3</Version>
+		<Version>2.0.4</Version>
 		<RepositoryType>git</RepositoryType>
 		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
-		<PackageTags>SmartRefresh.Header SmartRefresh.Layout Refresh SmartRefreshLayout Xamarin Plugin Binding Xamarin.Android</PackageTags>
-		<Product>SmartRefresh.Header</Product>
+		<PackageTags>TinyPinyin com.github.promeg:tinypinyin Xamarin Plugin Binding Xamarin.Android</PackageTags>
+		<Product>TinyPinyin</Product>
 		<Company />
-		<PackageId>SmartRefresh.Header</PackageId>
-		<AssemblyName>XAB.SmartRefresh.Header</AssemblyName>
-		<Title>Xamarin Android Binding Library - SmartRefresh.Header</Title>
+		<PackageId>XAB.TinyPinyin</PackageId>
+		<AssemblyName>XAB.TinyPinyin</AssemblyName>
+		<Title>Xamarin Android Binding Library - com.github.promeg:tinypinyin</Title>
 		<Authors>https://github.com/AigioL</Authors>
 		<Description>
-			SmartRefresh.Header Binding for Xamarin Android. https://github.com/scwang90/SmartRefreshLayout
+			com.github.promeg:tinypinyin Binding for Xamarin Android. https://github.com/AigioL/TinyPinyin
 
 			Commonly Used Types:
-			com.scwang.smartrefresh.header.BezierCircleHeader -&gt; Com.Scwang.Smartrefresh.Header.BezierCircleHeader
+			com.github.promeg.pinyinhelper -&gt; TinyPinyin.PinyinHelper
 		</Description>
+		<RootNamespace>TinyPinyin</RootNamespace>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<AndroidUseIntermediateDesignerFile>false</AndroidUseIntermediateDesignerFile>
+		<LangVersion>preview</LangVersion>
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
+		<EmbeddedJar Include="Jars\*.jar" />
 		<LibraryProjectZip Include="Jars\*.aar" />
 		<TransformFile Include="Transforms\*.xml" />
-		<None Remove="Transforms\*.xml" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<!-- https://github.com/scwang90/SmartRefreshLayout/blob/androidx/refresh-layout/build.gradle -->
-		<PackageReference Include="Xamarin.Google.Android.Material" Version="1.1.0.5" />
+		<PackageReference Include="XAB.Aho-Corasick" Version="0.6.3" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.6.20.1" />
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\SmartRefresh.Layout\SmartRefresh.Layout.csproj" />
 	</ItemGroup>
 
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
 		<Compile Remove="obj\Debug\net6.0-android\**" />
 		<Compile Remove="obj\Release\net6.0-android\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Jars\" />
 	</ItemGroup>
 </Project>
