@@ -16,8 +16,7 @@
 		<AssemblyName>XAB.Facebook.Shimmer</AssemblyName>
 		<Title>Xamarin Android Binding Library - Facebook.Shimmer</Title>
 		<Authors>https://github.com/AigioL</Authors>
-		<Description>
-			Facebook.Shimmer Binding for Xamarin Android. https://github.com/facebook/shimmer-android
+		<Description>Facebook.Shimmer Binding for Xamarin Android. https://github.com/facebook/shimmer-android
 
 			Commonly Used Types:
 			com.facebook.shimmer.ShimmerFrameLayout -&gt; Com.Facebook.Shimmer.ShimmerFrameLayout

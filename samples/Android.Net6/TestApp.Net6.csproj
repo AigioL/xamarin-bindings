@@ -1,0 +1,105 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0-android</TargetFramework>
+		<SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
+		<OutputType>Exe</OutputType>
+		<AndroidUseAapt2>true</AndroidUseAapt2>
+		<AndroidTlsProvider>btls</AndroidTlsProvider>
+		<AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+		<RuntimeIdentifiers>android-arm;android-arm64;android-x64</RuntimeIdentifiers>
+		<AndroidGenerateLayoutBindings>true</AndroidGenerateLayoutBindings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="de.hdodenhof.circleimageview">
+			<Version>3.1.0.3</Version>
+		</PackageReference>
+		<PackageReference Include="SmartRefresh.Header">
+			<Version>1.1.0.3</Version>
+		</PackageReference>
+		<PackageReference Include="SmartRefresh.Layout">
+			<Version>1.1.0.3</Version>
+		</PackageReference>
+		<PackageReference Include="XAB.Facebook.Shimmer">
+			<Version>0.5.0.3</Version>
+		</PackageReference>
+		<PackageReference Include="XAB.FlexboxLayout">
+			<Version>3.0.0.1</Version>
+		</PackageReference>
+		<PackageReference Include="XAB.TinyPinyin">
+			<Version>2.0.4.3</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Annotation">
+			<Version>1.3.0.3</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.AppCompat">
+			<Version>1.4.1.1</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.CardView">
+			<Version>1.0.0.15</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Core">
+			<Version>1.7.0.2</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Fragment">
+			<Version>1.4.1.1</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.UI">
+			<Version>1.0.0.14</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils">
+			<Version>1.0.0.13</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.RecyclerView">
+			<Version>1.2.1.6</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.AndroidX.Transition">
+			<Version>1.4.1.6</Version>
+		</PackageReference>
+		<PackageReference Include="Xamarin.Google.Android.Material">
+			<Version>1.5.0.2</Version>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="..\Android\Activities\*.cs" LinkBase="Activities" />
+		<Compile Include="..\Android\Properties\*.cs" LinkBase="Properties" />
+		<Compile Include="..\Android\Utils\*.cs" LinkBase="Utils" />
+		<Compile Include="..\Android\*.cs" />
+	</ItemGroup>
+	
+ <ItemGroup>
+    <AndroidResource Include="..\Android\Resources\layout\activity_main.xml" Link="Resources\layout\activity_main.xml" />
+    <AndroidResource Include="..\Android\Resources\values\colors.xml" Link="Resources\values\colors.xml" />
+    <AndroidResource Include="..\Android\Resources\values\dimens.xml" Link="Resources\values\dimens.xml" />
+    <AndroidResource Include="..\Android\Resources\values\ic_launcher_background.xml" Link="Resources\values\ic_launcher_background.xml" />
+    <AndroidResource Include="..\Android\Resources\values\strings.xml" Link="Resources\values\strings.xml" />
+    <AndroidResource Include="..\Android\Resources\values\styles.xml" Link="Resources\values\styles.xml" />
+    <AndroidResource Include="..\Android\Resources\menu\menu_main.xml" Link="Resources\menu\menu_main.xml" />
+    <AndroidResource Include="..\Android\Resources\mipmap-anydpi-v26\ic_launcher.xml" Link="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+    <AndroidResource Include="..\Android\Resources\mipmap-anydpi-v26\ic_launcher_round.xml" Link="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
+    <AndroidResource Include="..\Android\Resources\mipmap-hdpi\ic_launcher.png" Link="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-hdpi\ic_launcher_foreground.png" Link="Resources\mipmap-hdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-hdpi\ic_launcher_round.png" Link="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-mdpi\ic_launcher.png" Link="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-mdpi\ic_launcher_foreground.png" Link="Resources\mipmap-hdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-mdpi\ic_launcher_round.png" Link="Resources\mipmap-hdpi\ic_launcher_round.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-xhdpi\ic_launcher.png" Link="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-xhdpi\ic_launcher_foreground.png" Link="Resources\mipmap-xhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-xhdpi\ic_launcher_round.png" Link="Resources\mipmap-xhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-xxhdpi\ic_launcher.png" Link="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-xxhdpi\ic_launcher_foreground.png" Link="Resources\mipmap-xxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-xxhdpi\ic_launcher_round.png" Link="Resources\mipmap-xxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-xxxhdpi\ic_launcher.png" Link="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" Link="Resources\mipmap-xxxhdpi\ic_launcher_foreground.png" />
+    <AndroidResource Include="..\Android\Resources\mipmap-xxxhdpi\ic_launcher_round.png" Link="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
+    <AndroidResource Include="..\Android\Resources\drawable\shimmer_background.jpg" Link="Resources\drawable\shimmer_background.jpg" />
+    <AndroidResource Include="..\Android\Resources\drawable-xxhdpi\profile.png" Link="Resources\drawable-xxhdpi\profile.png" />
+    <AndroidResource Include="..\Android\Resources\drawable\divider.xml" Link="Resources\drawable\divider.xml" />
+    <AndroidResource Include="..\Android\Resources\layout\activity_shimmer.xml" Link="Resources\layout\activity_shimmer.xml" />
+    <AndroidResource Include="..\Android\Resources\layout\activity_flexbox.xml" Link="Resources\layout\activity_flexbox.xml" />
+    <AndroidResource Include="..\Android\Resources\layout\activity_smart_refresh.xml" Link="Resources\layout\activity_smart_refresh.xml" />
+  </ItemGroup>
+
+</Project>

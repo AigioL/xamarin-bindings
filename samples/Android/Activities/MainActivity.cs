@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 using Android.App;
 using Android.OS;
 using Android.Runtime;
@@ -10,6 +10,7 @@ using Binding;
 using TestApp.Utils;
 using SEnvironment = System.Environment;
 using Android.Widget;
+using TinyPinyin;
 
 namespace TestApp.Activities
 {
@@ -27,7 +28,7 @@ namespace TestApp.Activities
             Binding = new activity_main(this);
             Instance = this;
             SetSupportActionBar(Binding.toolbar);
-            Binding.tvDependencies.Text = string.Join(SEnvironment.NewLine, Dependencies.Values);
+            Binding.tvText.Text = string.Join(SEnvironment.NewLine, new[] { $"CLR Version: {SEnvironment.Version}" }.Concat(Dependencies.Values));
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -49,7 +50,11 @@ namespace TestApp.Activities
 
         public void OnClick(View view)
         {
-            if (view is TextView textView)
+            if (view.Id == Resource.Id.btnTinyPinyin)
+            {
+                Toast.MakeText(this, $"{PinyinHelper.GetPinyin("适用于Java和Android的快速、低内存占用的汉字转拼音库。", string.Empty)}", ToastLength.Long).Show();
+            }
+            else if (view is TextView textView)
             {
                 ActivityUtil.StartActivity(this, textView.Text);
             }

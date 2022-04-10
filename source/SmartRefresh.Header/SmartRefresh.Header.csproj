@@ -16,8 +16,7 @@
 		<AssemblyName>XAB.SmartRefresh.Header</AssemblyName>
 		<Title>Xamarin Android Binding Library - SmartRefresh.Header</Title>
 		<Authors>https://github.com/AigioL</Authors>
-		<Description>
-			SmartRefresh.Header Binding for Xamarin Android. https://github.com/scwang90/SmartRefreshLayout
+		<Description>SmartRefresh.Header Binding for Xamarin Android. https://github.com/scwang90/SmartRefreshLayout
 
 			Commonly Used Types:
 			com.scwang.smartrefresh.header.BezierCircleHeader -&gt; Com.Scwang.Smartrefresh.Header.BezierCircleHeader

@@ -5,7 +5,7 @@
 		<IsBindingProject>true</IsBindingProject>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<Version>3.1.0.2</Version>
+		<Version>3.1.0.3</Version>
 		<RepositoryType>git</RepositoryType>
 		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
@@ -16,8 +16,7 @@
 		<AssemblyName>XAB.de.hdodenhof.circleimageview</AssemblyName>
 		<Title>Xamarin Android Binding Library - de.hdodenhof.circleimageview</Title>
 		<Authors>https://github.com/AigioL</Authors>
-		<Description>
-			de.hdodenhof.circleimageview Binding for Xamarin Android. https://github.com/hdodenhof/CircleImageView
+		<Description>de.hdodenhof.circleimageview Binding for Xamarin Android. https://github.com/hdodenhof/CircleImageView
 
 			Commonly Used Types:
 			de.hdodenhof.circleimageview.CircleImageView -&gt; DE.Hdodenhof.Circleimageview.CircleImageView
@@ -28,6 +27,7 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);CustomContentTarget</TargetsForTfmSpecificContentInPackage>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -46,4 +46,12 @@
 		<Compile Remove="obj\Debug\net6.0-android\**" />
 		<Compile Remove="obj\Release\net6.0-android\**" />
 	</ItemGroup>
+
+	<Target Name="CustomContentTarget">
+		<ItemGroup>
+			<TfmSpecificPackageFile Include="Jars/*.aar" Condition=" '$(TargetFramework)' == 'net6.0-android'  ">
+				<PackagePath>lib/net6.0-android31.0</PackagePath>
+			</TfmSpecificPackageFile>
+		</ItemGroup>
+	</Target>
 </Project>

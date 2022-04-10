@@ -5,7 +5,7 @@
 		<IsBindingProject>true</IsBindingProject>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<Version>3.2.0.2</Version>
+		<Version>3.2.0.3</Version>
 		<RepositoryType>git</RepositoryType>
 		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
@@ -16,8 +16,7 @@
 		<AssemblyName>XAB.FloatingActionButtonSpeedDial</AssemblyName>
 		<Title>Xamarin Android Binding Library - com.leinardi.android:speed-dial</Title>
 		<Authors>https://github.com/AigioL</Authors>
-		<Description>
-			com.leinardi.android:speed-dial for Xamarin Android. https://github.com/leinardi/FloatingActionButtonSpeedDial
+		<Description>com.leinardi.android:speed-dial for Xamarin Android. https://github.com/leinardi/FloatingActionButtonSpeedDial
 
 			Commonly Used Types:
 			com.leinardi.android.speeddial.SpeedDialView -&gt; Com.Leinardi.Android.Speeddial.SpeedDialView
@@ -28,6 +27,7 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);CustomContentTarget</TargetsForTfmSpecificContentInPackage>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -49,4 +49,12 @@
 		<Compile Remove="obj\Debug\net6.0-android\**" />
 		<Compile Remove="obj\Release\net6.0-android\**" />
 	</ItemGroup>
+
+	<Target Name="CustomContentTarget">
+		<ItemGroup>
+			<TfmSpecificPackageFile Include="Jars/*.aar" Condition=" '$(TargetFramework)' == 'net6.0-android'  ">
+				<PackagePath>lib/net6.0-android31.0</PackagePath>
+			</TfmSpecificPackageFile>
+		</ItemGroup>
+	</Target>
 </Project>

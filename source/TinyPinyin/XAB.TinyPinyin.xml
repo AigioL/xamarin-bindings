@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XAB.TinyPinyin</name>
+    </assembly>
+    <members>
+        <member name="T:TinyPinyin.Engine">
+            <summary>
+            字符串转拼音引擎，支持字典和 <see cref="T:TinyPinyin.ISegmentationSelector"/>
+            </summary>
+        </member>
+        <member name="M:TinyPinyin.PinyinHelper.Init(TinyPinyin.PinyinHelper.Config)">
+            <summary>
+            使用 <see cref="T:TinyPinyin.PinyinHelper.Config"/> 初始化 <see cref="N:TinyPinyin"/> 库
+            </summary>
+            <param name="config">相应的设置，传入 <see langword="null"/> 则会清空所有的词典</param>
+        </member>
+        <member name="M:TinyPinyin.PinyinHelper.Add(TinyPinyin.IPinyinDict)">
+            <summary>
+            向 <see cref="N:TinyPinyin"/> 中追加词典
+            <para>注意: 若有多个词典，推荐使用性能更优的 <see cref="M:TinyPinyin.PinyinHelper.Init(TinyPinyin.PinyinHelper.Config)"/> 初始化 <see cref="N:TinyPinyin"/></para>
+            </summary>
+            <param name="dict">输入的词典</param>
+        </member>
+        <member name="M:TinyPinyin.PinyinHelper.NewConfig">
+            <summary>
+            返回新的 <see cref="T:TinyPinyin.PinyinHelper.Config"/> 对象
+            </summary>
+            <returns>新的 <see cref="T:TinyPinyin.PinyinHelper.Config"/> 对象</returns>
+        </member>
+        <member name="M:TinyPinyin.PinyinHelper.GetPinyin(System.String,System.String)">
+            <summary>
+            将输入字符串转为拼音，转换过程中会使用之前设置的用户词典，以字符为单位插入分隔符
+            <para>例: "hello:中国" 在 separator 为 "," 时，输出： "h,e,l,l,o,:,ZHONG,GUO,!"</para>
+            </summary>
+            <param name="str">输入字符串</param>
+            <param name="separator">分隔符</param>
+            <returns>中文转为拼音的字符串</returns>
+        </member>
+        <member name="M:TinyPinyin.PinyinHelper.ToPinyin(System.String,System.String,TinyPinyin.PinyinRules)">
+            <summary>
+            将输入字符串转为拼音，转换过程中会使用之前设置的用户词典，以字符为单位插入分隔符
+            <para>例: "hello:中国" 在 separator 为 "," 时，输出： "h,e,l,l,o,:,ZHONG,GUO,!"</para>
+            </summary>
+            <param name="str">输入字符串</param>
+            <param name="separator">分隔符</param>
+            <param name="rules">自定义的规则，具有最高优先级</param>
+            <returns>中文转为拼音的字符串</returns>
+        </member>
+        <member name="M:TinyPinyin.PinyinHelper.GetPinyin(System.Char)">
+            <summary>
+            将输入字符转为拼音
+            </summary>
+            <param name="c">输入字符</param>
+            <returns>return pinyin if c is chinese in uppercase, String.valueOf(c) otherwise.</returns>
+        </member>
+        <member name="M:TinyPinyin.PinyinHelper.ToPinyin(System.Char,TinyPinyin.PinyinRules)">
+            <summary>
+            将输入字符转为拼音
+            </summary>
+            <param name="c">输入字符</param>
+            <param name="rules">自定义规则，具有最高优先级</param>
+            <returns>return pinyin if c is chinese in uppercase, String.valueOf(c) otherwise.</returns>
+        </member>
+        <member name="M:TinyPinyin.PinyinHelper.IsChinese(System.Char)">
+            <summary>
+            判断输入字符是否为汉字
+            </summary>
+            <param name="c">输入字符</param>
+            <returns>return whether c is chinese</returns>
+        </member>
+        <member name="M:TinyPinyin.PinyinHelper.Config.With(TinyPinyin.IPinyinDict)">
+            <summary>
+            添加字典
+            </summary>
+            <param name="dict">字典</param>
+            <returns>返回 <see cref="T:TinyPinyin.PinyinHelper.Config"/> 对象，支持继续添加字典</returns>
+        </member>
+        <member name="T:TinyPinyin.IPinyinDict">
+            <summary>
+            字典接口，字典应保证对 <see cref="M:TinyPinyin.IPinyinDict.Words"/> 中的所有词，<see cref="M:TinyPinyin.IPinyinDict.ToPinyin(System.String)"/> 均返回非 <see langword="null"/> 的结果
+            </summary>
+        </member>
+        <member name="M:TinyPinyin.IPinyinDict.ToPinyin(System.String)">
+            <summary>
+            将词转换为拼音
+            </summary>
+            <param name="p0">词</param>
+            <returns>应保证对 <see cref="M:TinyPinyin.IPinyinDict.Words"/> 中的所有词，<see cref="M:TinyPinyin.IPinyinDict.ToPinyin(System.String)"/> 均返回非 <see langword="null"/> 的结果</returns>
+        </member>
+        <member name="M:TinyPinyin.IPinyinDict.Words">
+            <summary>
+            字典所包含的所有词
+            </summary>
+            <returns>所包含的所有词</returns>
+        </member>
+        <member name="T:TinyPinyin.PinyinMapDict">
+            <summary>
+            基于 <see cref="T:Java.Util.Map"/> 的字典实现，利于添加自定义字典
+            </summary>
+        </member>
+        <member name="M:TinyPinyin.PinyinMapDict.Mapping">
+            <summary>
+            Key 为字典的词，Value 为该词所对应的拼音
+            </summary>
+            <returns>包含词和对应拼音的 <see cref="T:Java.Util.Map"/></returns>
+        </member>
+        <member name="T:TinyPinyin.ISegmentationSelector">
+            <summary>
+            分词选择算法应实现的接口
+            </summary>
+        </member>
+        <member name="M:TinyPinyin.ISegmentationSelector.Select(System.Collections.Generic.ICollection{Org.Ahocorasick.Trie.Emit})">
+            <summary>
+            从匹配到的所有词中，挑选出合适的词列表
+            <para>例如，词典为："中国"，"中国人"，"人民" "中国人民来了" 的 emits 为：[0,1]中国、[0,2]中国人、[2,3]人民</para>
+            <para>按照正向最大匹配算法，会挑选出：[0,2]中国人</para>
+            <para>Waring:  返回的 Emit 列表中，不能存在交集，如上例中，不能同时返回 [0,2]中国人 和 [2,3]人民</para>
+            </summary>
+            <param name="p0">匹配到的所有词</param>
+            <returns>返回的 Emit 列表, 不能存在交集</returns>
+        </member>
+    </members>
+</doc>

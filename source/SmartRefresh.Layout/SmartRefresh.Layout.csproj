@@ -16,8 +16,7 @@
 		<AssemblyName>XAB.SmartRefresh.Layout</AssemblyName>
 		<Title>Xamarin Android Binding Library - SmartRefresh.Layout</Title>
 		<Authors>https://github.com/AigioL</Authors>
-		<Description>
-			SmartRefresh.Layout Binding for Xamarin Android. https://github.com/scwang90/SmartRefreshLayout
+		<Description>SmartRefresh.Layout Binding for Xamarin Android. https://github.com/scwang90/SmartRefreshLayout
 
 			Commonly Used Types:
 			com.scwang.smartrefresh.layout.SmartRefreshLayout -&gt; Com.Scwang.Smartrefresh.Layout.SmartRefreshLayout

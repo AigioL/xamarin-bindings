@@ -44,18 +44,7 @@
           app:civ_border_width="2dp" />
 
       <androidx.appcompat.widget.AppCompatTextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginStart="12dp"
-          android:layout_marginTop="12dp"
-          android:layout_marginEnd="12dp"
-          android:layout_marginBottom="0dp"
-          android:text="Dependencies"
-          android:textStyle="bold"
-          xamarin:managedType="AndroidX.AppCompat.Widget.AppCompatTextView" />
-
-      <androidx.appcompat.widget.AppCompatTextView
-          android:id="@+id/tvDependencies"
+          android:id="@+id/tvText"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_margin="14dp"
@@ -92,6 +81,14 @@
             android:layout_height="wrap_content"
             android:onClick="onClick"
             android:text="SmartRefresh"
+            xamarin:managedType="AndroidX.AppCompat.Widget.AppCompatButton" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnTinyPinyin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="TinyPinyin"
             xamarin:managedType="AndroidX.AppCompat.Widget.AppCompatButton" />
 
       </LinearLayout>

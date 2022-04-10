@@ -16,8 +16,7 @@
 		<AssemblyName>XAB.FlexboxLayout</AssemblyName>
 		<Title>Xamarin Android Binding Library - FlexboxLayout</Title>
 		<Authors>https://github.com/AigioL</Authors>
-		<Description>
-			FlexboxLayout Binding for Xamarin Android. https://github.com/google/flexbox-layout
+		<Description>FlexboxLayout Binding for Xamarin Android. https://github.com/google/flexbox-layout
 
 			Commonly Used Types:
 			com.google.android.flexbox.FlexboxLayout -&gt; Android.Flexbox.FlexboxLayout

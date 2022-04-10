@@ -26,6 +26,8 @@ namespace TestApp
         {
             base.OnCreate();
             if (Instance == null) Instance = this;
+
+            TinyPinyin.PinyinHelper.Init(null);
         }
     }
 }

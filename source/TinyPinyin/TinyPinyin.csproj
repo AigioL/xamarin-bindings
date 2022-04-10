@@ -1,11 +1,12 @@
-<Project Sdk="MSBuild.Sdk.Extras">
+﻿<Project Sdk="MSBuild.Sdk.Extras">
 
 	<PropertyGroup>
 		<TargetFrameworks>MonoAndroid12.0;net6.0-android</TargetFrameworks>
+		<!--<TargetFrameworks>netstandard1.0</TargetFrameworks>-->
 		<IsBindingProject>true</IsBindingProject>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<Version>2.0.4.2</Version>
+		<Version>2.0.4.3</Version>
 		<RepositoryType>git</RepositoryType>
 		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
@@ -16,14 +17,13 @@
 		<AssemblyName>XAB.TinyPinyin</AssemblyName>
 		<Title>Xamarin Android Binding Library - com.github.promeg:tinypinyin</Title>
 		<Authors>https://github.com/AigioL</Authors>
-		<Description>
-			com.github.promeg:tinypinyin Binding for Xamarin Android. https://github.com/AigioL/TinyPinyin
+		<Description>com.github.promeg:tinypinyin Binding for Xamarin Android. https://github.com/AigioL/TinyPinyin
 
 			Commonly Used Types:
 			com.github.promeg.pinyinhelper -&gt; TinyPinyin.PinyinHelper
 		</Description>
 		<RootNamespace>TinyPinyin</RootNamespace>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -32,6 +32,11 @@
 		<AndroidUseIntermediateDesignerFile>false</AndroidUseIntermediateDesignerFile>
 		<LangVersion>preview</LangVersion>
 		<Nullable>enable</Nullable>
+		<TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);CustomContentTarget</TargetsForTfmSpecificContentInPackage>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -40,7 +45,7 @@
 		<TransformFile Include="Transforms\*.xml" />
 	</ItemGroup>
 
-	<ItemGroup>
+	<ItemGroup Condition=" !$(TargetFramework.StartsWith('netstandard')) ">
 		<PackageReference Include="XAB.Aho-Corasick" Version="0.6.3" />
 		<!--<PackageReference Include="Xamarin.Kotlin.StdLib" Version="1.6.20.1" />-->
 		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
@@ -50,4 +55,18 @@
 		<Compile Remove="obj\Debug\net6.0-android\**" />
 		<Compile Remove="obj\Release\net6.0-android\**" />
 	</ItemGroup>
+
+	<!--<ItemGroup>
+	  <None Update="XAB.TinyPinyin.xml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>-->
+
+	<Target Name="CustomContentTarget">
+		<ItemGroup>
+			<TfmSpecificPackageFile Include="Jars/*.aar" Condition=" '$(TargetFramework)' == 'net6.0-android'  ">
+				<PackagePath>lib/net6.0-android31.0</PackagePath>
+			</TfmSpecificPackageFile>
+		</ItemGroup>
+	</Target>
 </Project>

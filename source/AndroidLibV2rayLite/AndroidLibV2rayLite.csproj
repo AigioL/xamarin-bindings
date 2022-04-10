@@ -16,8 +16,7 @@
 		<AssemblyName>XAB.AndroidLibV2rayLite</AssemblyName>
 		<Title>Xamarin Android Binding Library - AndroidLibV2rayLite</Title>
 		<Authors>https://github.com/AigioL</Authors>
-		<Description>
-			AndroidLibV2rayLite Binding for Xamarin Android. https://github.com/2dust/AndroidLibV2rayLite
+		<Description>AndroidLibV2rayLite Binding for Xamarin Android. https://github.com/2dust/AndroidLibV2rayLite
 
 			Commonly Used Types:
 			libv2ray.Libv2ray -&gt; Libv2ray.Libv2ray

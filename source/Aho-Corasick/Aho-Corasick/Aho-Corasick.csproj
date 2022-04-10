@@ -16,8 +16,7 @@
 		<AssemblyName>XAB.Aho-Corasick</AssemblyName>
 		<Title>Xamarin Android Binding Library - org.ahocorasick</Title>
 		<Authors>https://github.com/AigioL</Authors>
-		<Description>
-			org.ahocorasick Binding for Xamarin Android. https://github.com/robert-bor/aho-corasick
+		<Description>org.ahocorasick Binding for Xamarin Android. https://github.com/robert-bor/aho-corasick
 
 			Commonly Used Types:
 			org.ahocorasick.trie -&gt; Org.Ahocorasick.Trie
