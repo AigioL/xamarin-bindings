@@ -9,7 +9,7 @@
 
   <!-- 文档参考 https://docs.microsoft.com/zh-cn/xamarin/android/platform/binding-java-library -->
 
-  <!--删除库中的BuildConfig类-->
+  <!-- 删除库中的 BuildConfig 类 -->
 	<remove-node path="/api/package[@name='com.github.promeg.tinypinyin']/class[@name='BuildConfig']" />
 
   <attr path="/api/package[@name='com.github.promeg.pinyinhelper']/class[@name='Pinyin']" name="managedName">PinyinHelper</attr>

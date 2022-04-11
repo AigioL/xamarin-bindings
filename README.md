@@ -36,3 +36,6 @@ Xamarin.Android and ~~Xamarin.iOS~~ binding
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.biezhi/TinyPinyin)](https://search.maven.org/artifact/io.github.biezhi/TinyPinyin)
     - Fast, low memory footprint Chinese character to Pinyin library for Android
 <!--## iOS Libraries-->
+
+## Publish samples\TestApp.Net6
+```dotnet publish "samples\Android.Net6\TestApp.Net6.csproj" -f:net6.0-android -c:Release```

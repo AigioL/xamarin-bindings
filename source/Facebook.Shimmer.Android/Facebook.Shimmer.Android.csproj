@@ -5,7 +5,7 @@
 		<IsBindingProject>true</IsBindingProject>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
-		<Version>0.5.0.3</Version>
+		<Version>0.5.0.4</Version>
 		<RepositoryType>git</RepositoryType>
 		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
@@ -14,6 +14,7 @@
 		<Company />
 		<PackageId>XAB.Facebook.Shimmer</PackageId>
 		<AssemblyName>XAB.Facebook.Shimmer</AssemblyName>
+		<RootNamespace>Com.Facebook.Shimmer</RootNamespace>
 		<Title>Xamarin Android Binding Library - Facebook.Shimmer</Title>
 		<Authors>https://github.com/AigioL</Authors>
 		<Description>Facebook.Shimmer Binding for Xamarin Android. https://github.com/facebook/shimmer-android
@@ -27,14 +28,23 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<AndroidUseIntermediateDesignerFile>false</AndroidUseIntermediateDesignerFile>
+		<LangVersion>preview</LangVersion>
+		<Nullable>enable</Nullable>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<LibraryProjectZip Include="Jars\*.aar" />
+		<InputJar Include="Jars\classes.jar" />
+		<None Remove="Jars\classes.jar" />
 		<TransformFile Include="Transforms\*.xml" />
 		<None Remove="Transforms\*.xml" />
+		<None Include="../../aar/shimmer.aar" Pack="True" PackagePath="\aar\shimmer.aar" />
+		<None Include="../../build/monoandroid9.0/$(PackageId).targets" Pack="True" PackagePath="\build\monoandroid9.0\$(PackageId).targets" />
+		<None Include="../../build/net6.0-android31.0/$(PackageId).targets" Pack="True" PackagePath="\build\net6.0-android31.0\$(PackageId).targets" />
+		<None Include="../../buildTransitive/monoandroid9.0/$(PackageId).targets" Pack="True" PackagePath="\buildTransitive\monoandroid9.0\$(PackageId).targets" />
+		<None Include="../../buildTransitive/net6.0-android31.0/$(PackageId).targets" Pack="True" PackagePath="\buildTransitive\net6.0-android31.0\$(PackageId).targets" />
 	</ItemGroup>
-
+	
 	<ItemGroup>
 		<!-- https://github.com/facebook/shimmer-android/blob/0.5.0/shimmer/build.gradle -->
 		<!-- https://github.com/facebook/shimmer-android/blob/main/versions.gradle -->

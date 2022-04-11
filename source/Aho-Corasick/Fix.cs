@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
 using System.Collections;
-using Android.Runtime;
+using Java.Interop;
 
 // ReSharper disable once CheckNamespace
-namespace Org.Ahocorasick.Interval
+namespace Org.AhoCorasick.Interval
 {
     partial class IntervalableComparatorByPosition : Java.Util.IComparator
     {
@@ -24,7 +24,7 @@ namespace Org.Ahocorasick.Interval
 }
 
 // ReSharper disable once CheckNamespace
-namespace Org.Ahocorasick.Trie
+namespace Org.AhoCorasick.Trie
 {
     partial class Payload : Java.Lang.IComparable
     {
@@ -55,20 +55,36 @@ namespace Org.Ahocorasick.Trie
         {
         }
 
-        protected PayloadEmit(IntPtr javaReference, JniHandleOwnership transfer) : base(javaReference, transfer)
+        protected PayloadEmit(IntPtr javaReference, Android.Runtime.JniHandleOwnership transfer) : base(javaReference, transfer)
         {
         }
     }
 }
 
 // ReSharper disable once CheckNamespace
-namespace Org.Ahocorasick.Trie.Handler
+namespace Org.AhoCorasick.Trie.Handler
 {
     partial class AbstractStatefulPayloadEmitHandler
     {
-        public virtual bool Emit(PayloadEmit? p0)
+        public abstract bool Emit(PayloadEmit? emit);
+    }
+
+    partial class AbstractStatefulPayloadEmitHandlerInvoker
+    {
+        public override unsafe bool Emit(PayloadEmit? emit)
         {
-            return false;
+            const string __id = "emit.(Lorg/ahocorasick/trie/PayloadEmit;)Z";
+            try
+            {
+                JniArgumentValue* __args = stackalloc JniArgumentValue[1];
+                __args[0] = new JniArgumentValue((emit == null) ? IntPtr.Zero : ((global::Java.Lang.Object)emit).Handle);
+                var __rm = _members.InstanceMethods.InvokeVirtualBooleanMethod(__id, this, __args);
+                return __rm;
+            }
+            finally
+            {
+                global::System.GC.KeepAlive(emit);
+            }
         }
     }
 

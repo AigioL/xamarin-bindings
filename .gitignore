@@ -356,3 +356,6 @@ classes.jar
 nuget.exe
 nuspec/*.bat
 .nupkg
+
+# jadx
+*.jobf

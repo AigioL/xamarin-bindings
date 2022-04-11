@@ -8,4 +8,7 @@
   -->
 
   <!-- 文档参考 https://docs.microsoft.com/zh-cn/xamarin/android/platform/binding-java-library -->
+  <attr path="/api/package[@name='org.ahocorasick.interval']" name="managedName">Org.AhoCorasick.Interval</attr>
+  <attr path="/api/package[@name='org.ahocorasick.trie']" name="managedName">Org.AhoCorasick.Trie</attr>
+  <attr path="/api/package[@name='org.ahocorasick.trie.handler']" name="managedName">Org.AhoCorasick.Trie.Handler</attr>
 </metadata>

@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
+#nullable enable
+
 namespace TestApp.Utils
 {
     public static class Dependencies
@@ -28,7 +30,28 @@ namespace TestApp.Utils
             {
                 var value = item.GetCustomAttributes<AssemblyFileVersionAttribute>()
                     .FirstOrDefault()?.Version;
-                if (value != null) yield return $"{item.GetName().Name}: {value}";
+                if (value != null) yield return $"{item.GetName().Name.TrimStart("XAB.")}: {value}";
+            }
+        }
+
+        public static string? MonoRuntimeVersion
+        {
+            get
+            {
+#if NET6_0_OR_GREATER
+                var typeRuntime = Type.GetType("Mono.Runtime");
+                if (typeRuntime != null)
+                {
+                    var method = typeRuntime.GetMethod("GetDisplayName", BindingFlags.Static | BindingFlags.Public);
+                    if (method != null && method.ReturnType == typeof(string))
+                    {
+                        return (string)method.Invoke(null, null);
+                    }
+                }
+                return null;
+#else
+                return global::Mono.Runtime.GetDisplayName();
+#endif
             }
         }
     }

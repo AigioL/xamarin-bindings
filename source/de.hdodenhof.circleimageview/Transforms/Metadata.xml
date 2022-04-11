@@ -6,4 +6,9 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+
+  <!-- 文档参考 https://docs.microsoft.com/zh-cn/xamarin/android/platform/binding-java-library -->
+
+  <!-- 删除库中的 BuildConfig 类 -->
+  <remove-node path="/api/package[@name='de.hdodenhof.circleimageview']/class[@name='BuildConfig']" />
 </metadata>

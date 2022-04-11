@@ -6,6 +6,12 @@
   This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
+
+  <!-- 文档参考 https://docs.microsoft.com/zh-cn/xamarin/android/platform/binding-java-library -->
+
+  <!-- 删除库中的 BuildConfig 类 -->
+  <remove-node path="/api/package[@name='com.facebook.shimmer']/class[@name='BuildConfig']" />
+	
   <attr path="/api/package[@name='com.facebook.shimmer']/class[@name='ShimmerFrameLayout']/method[@name='onLayout' and count(parameter)=5 and parameter[1][@type='boolean'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]" name="visibility">protected</attr>
   <remove-node path="/api/package[@name='com.facebook.shimmer']/class[@name='Shimmer.Builder']/method[@name='getThis' and count(parameter)=0]" />
   <remove-node path="/api/package[@name='com.facebook.shimmer']/class[@name='Shimmer.AlphaHighlightBuilder']/method[@name='getThis' and count(parameter)=0]" />

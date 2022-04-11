@@ -6,6 +6,10 @@ using Java.Interop;
 // ReSharper disable once CheckNamespace
 namespace Com.Scwang.Smartrefresh.Layout
 {
+    /// <summary>
+    /// SmartRefreshLayout's goal is to build a strong, stable and mature pull-down refresh layout framework, and to integrate all kinds of cool, diverse, practical and beautiful Headers and Footers.
+    /// <para>https://github.com/scwang90/SmartRefreshLayout</para>
+    /// </summary>
     partial class SmartRefreshLayout
     {
         [Register(".ctor", "(Landroid/content/Context;)V", "")]

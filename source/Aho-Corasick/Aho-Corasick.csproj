@@ -5,7 +5,7 @@
 		<IsBindingProject>true</IsBindingProject>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<Version>0.6.3</Version>
+		<Version>0.6.3.1</Version>
 		<RepositoryType>git</RepositoryType>
 		<PackageProjectUrl>https://github.com/AigioL/xamarin-bindings</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/AigioL/xamarin-bindings.git</RepositoryUrl>
@@ -14,14 +14,16 @@
 		<Company />
 		<PackageId>XAB.Aho-Corasick</PackageId>
 		<AssemblyName>XAB.Aho-Corasick</AssemblyName>
+		<RootNamespace>Org.Ahocorasick</RootNamespace>
 		<Title>Xamarin Android Binding Library - org.ahocorasick</Title>
 		<Authors>https://github.com/AigioL</Authors>
 		<Description>org.ahocorasick Binding for Xamarin Android. https://github.com/robert-bor/aho-corasick
 
 			Commonly Used Types:
-			org.ahocorasick.trie -&gt; Org.Ahocorasick.Trie
+			org.ahocorasick.interval -&gt; Org.AhoCorasick.Interval
+			org.ahocorasick.trie -&gt; Org.AhoCorasick.Trie
+			org.ahocorasick.trie.handler -&gt; Org.AhoCorasick.Trie.Handler
 		</Description>
-		<RootNamespace>Org.Ahocorasick</RootNamespace>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -34,10 +36,14 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<EmbeddedJar Include="Jars\*.jar" />
-		<LibraryProjectZip Include="Jars\*.aar" />
+		<InputJar Include="Jars\ahocorasick.jar" />
 		<TransformFile Include="Transforms\*.xml" />
 		<None Remove="Transforms\*.xml" />
+		<None Include="Jars/ahocorasick.jar" Pack="True" PackagePath="\aar\ahocorasick.jar" />
+		<None Include="../../build/monoandroid9.0/$(PackageId).targets" Pack="True" PackagePath="\build\monoandroid9.0\$(PackageId).targets" />
+		<None Include="../../build/net6.0-android31.0/$(PackageId).targets" Pack="True" PackagePath="\build\net6.0-android31.0\$(PackageId).targets" />
+		<None Include="../../buildTransitive/monoandroid9.0/$(PackageId).targets" Pack="True" PackagePath="\buildTransitive\monoandroid9.0\$(PackageId).targets" />
+		<None Include="../../buildTransitive/net6.0-android31.0/$(PackageId).targets" Pack="True" PackagePath="\buildTransitive\net6.0-android31.0\$(PackageId).targets" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0-android</TargetFramework>
@@ -9,26 +9,27 @@
 		<AndroidEnableMultiDex>true</AndroidEnableMultiDex>
 		<RuntimeIdentifiers>android-arm;android-arm64;android-x64</RuntimeIdentifiers>
 		<AndroidGenerateLayoutBindings>true</AndroidGenerateLayoutBindings>
+		<RootNamespace>TestApp</RootNamespace>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="de.hdodenhof.circleimageview">
-			<Version>3.1.0.3</Version>
+			<Version>3.1.0.4</Version>
 		</PackageReference>
 		<PackageReference Include="SmartRefresh.Header">
-			<Version>1.1.0.3</Version>
+			<Version>1.1.0.4</Version>
 		</PackageReference>
 		<PackageReference Include="SmartRefresh.Layout">
-			<Version>1.1.0.3</Version>
+			<Version>1.1.0.4</Version>
 		</PackageReference>
 		<PackageReference Include="XAB.Facebook.Shimmer">
-			<Version>0.5.0.3</Version>
+			<Version>0.5.0.4</Version>
 		</PackageReference>
 		<PackageReference Include="XAB.FlexboxLayout">
-			<Version>3.0.0.1</Version>
+			<Version>3.0.0.2</Version>
 		</PackageReference>
 		<PackageReference Include="XAB.TinyPinyin">
-			<Version>2.0.4.3</Version>
+			<Version>2.0.4.4</Version>
 		</PackageReference>
 		<PackageReference Include="Xamarin.AndroidX.Annotation">
 			<Version>1.3.0.3</Version>
@@ -63,6 +64,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<Compile Include="..\Android\Extensions\*.cs" LinkBase="Extensions" />
 		<Compile Include="..\Android\Activities\*.cs" LinkBase="Activities" />
 		<Compile Include="..\Android\Properties\*.cs" LinkBase="Properties" />
 		<Compile Include="..\Android\Utils\*.cs" LinkBase="Utils" />
